@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<search-results xmlns="http://www.w3.org/2005/Atom"
+	xmlns:cto="http://www.elsevier.com/xml/cto/dtd" xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/"
+	xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<opensearch:totalResults>1</opensearch:totalResults>
+	<opensearch:startIndex>0</opensearch:startIndex>
+	<opensearch:itemsPerPage>1</opensearch:itemsPerPage>
+	<opensearch:Query role="request" searchTerms="pmid%2824433243%29"
+		startPage="0" />
+	<link ref="self"
+		href="http://api.elsevier.com:80/content/search/index:scopus?start=0&amp;count=1&amp;query=pmid%2824433243%29&amp;field=pubmed-id,affiliation,author,afid&amp;view=COMPLETE&amp;apikey=e0fa610418a4859d24f2457e021aea60&amp;httpAccept=application/xml"
+		type="application/xml" />
+	<link ref="first"
+		href="http://api.elsevier.com:80/content/search/index:scopus?start=0&amp;count=1&amp;query=pmid%2824433243%29&amp;field=pubmed-id,affiliation,author,afid&amp;view=COMPLETE&amp;apikey=e0fa610418a4859d24f2457e021aea60&amp;httpAccept=application/xml"
+		type="application/xml" />
+	<link ref="last"
+		href="http://api.elsevier.com:80/content/search/index:scopus?start=0&amp;count=1&amp;query=pmid%2824433243%29&amp;field=pubmed-id,affiliation,author,afid&amp;view=COMPLETE&amp;apikey=e0fa610418a4859d24f2457e021aea60&amp;httpAccept=application/xml"
+		type="application/xml" />
+	<entry>
+		<prism:url>http://api.elsevier.com/content/abstract/scopus_id:84894300874
+		</prism:url>
+		<affiliation>
+			<affiliation-url>http://api.elsevier.com/content/affiliation/affiliation_id:
+			</affiliation-url>
+			<afid />
+			<affilname>Rutgers-NJMS</affilname>
+			<affiliation-city>Newark, NJ 07103</affiliation-city>
+			<affiliation-country>United States</affiliation-country>
+		</affiliation>
+		<pubmed-id>24433243</pubmed-id>
+		<author seq="1">
+			<author-url>http://api.elsevier.com/content/author/author_id:56529764400
+			</author-url>
+			<authid>56529764400</authid>
+			<authname>Pisklakov S.</authname>
+			<surname>Pisklakov</surname>
+			<given-name>S.</given-name>
+			<initials>S.</initials>
+			<afid />
+		</author>
+		<author seq="2">
+			<author-url>http://api.elsevier.com/content/author/author_id:56001028500
+			</author-url>
+			<authid>56001028500</authid>
+			<authname>Davidson M.</authname>
+			<surname>Davidson</surname>
+			<given-name>M. L.</given-name>
+			<initials>M.L.</initials>
+		</author>
+		<author seq="3">
+			<author-url>http://api.elsevier.com/content/author/author_id:36178573600
+			</author-url>
+			<authid>36178573600</authid>
+			<authname>Schoenberg C.</authname>
+			<surname>Schoenberg</surname>
+			<given-name>C.</given-name>
+			<initials>C.</initials>
+		</author>
+		<author seq="4">
+			<author-url>http://api.elsevier.com/content/author/author_id:56001911200
+			</author-url>
+			<authid>56001911200</authid>
+			<authname>Marcus A.</authname>
+			<surname>Marcus</surname>
+			<given-name>A.</given-name>
+			<initials>A.</initials>
+		</author>
+	</entry>
+</search-results>

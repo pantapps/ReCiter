@@ -2,32 +2,39 @@ package xmlparser.scopus;
 
 import static org.junit.Assert.assertEquals;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Map;
 
-import xmlparser.scopus.Parser;
-import xmlparser.scopus.ScopusXmlHandler;
-import xmlparser.scopus.ScopusXmlParser;
-import xmlparser.scopus.ScopusXmlQuery;
+import org.junit.Test;
+import org.xml.sax.InputSource;
+
 import xmlparser.scopus.model.Affiliation;
 import xmlparser.scopus.model.Author;
 import xmlparser.scopus.model.ScopusArticle;
 
-import org.junit.Test;
-import org.xml.sax.InputSource;
-
 public class ScopusXmlParserTest {
 
+	private static final String XML_24433243 = "src/test/resources/xml/24433243.xml";
+	
+	@Test
+	public void test24433243() {
+		ScopusXmlFetcher scopusFetcher = new ScopusXmlFetcher();
+		ScopusArticle scopusArticle = scopusFetcher.getScopusXml(new File(XML_24433243));
+		
+		assertEquals(0, scopusArticle.getAffiliationMap().size());
+	}
+	
 	@Test
 	public void testParser() throws MalformedURLException, IOException {
 		ScopusXmlQuery scopusXmlQuery = new ScopusXmlQuery.ScopusXmlQueryBuilder("25548331").build();
 		String scopusUrl = scopusXmlQuery.getQueryUrl();
 		InputSource scopusInputSource = new InputSource(new URL(scopusUrl).openStream());
 		ScopusXmlHandler scopusXmlHandler = new ScopusXmlHandler();
-		Parser scopusParser = new ScopusXmlParser(scopusInputSource, scopusXmlHandler);
-		ScopusArticle scopusArticle = scopusParser.parse();
+		ScopusXmlParser scopusParser = new ScopusXmlParser(scopusXmlHandler);
+		ScopusArticle scopusArticle = scopusParser.parse(scopusInputSource);
 		Map<Integer, Affiliation> affiliations = scopusArticle.getAffiliationMap();
 		assertEquals(2, affiliations.size());
 		
