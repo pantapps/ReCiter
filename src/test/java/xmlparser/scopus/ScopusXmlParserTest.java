@@ -25,6 +25,10 @@ public class ScopusXmlParserTest {
 		ScopusArticle scopusArticle = scopusFetcher.getScopusXml(new File(XML_24433243));
 		
 		assertEquals(0, scopusArticle.getAffiliationMap().size());
+		assertEquals(24433243, scopusArticle.getPubmedId());
+		
+		Map<Long, Author> authors = scopusArticle.getAuthors();
+		assertEquals(4, authors.size());
 	}
 	
 	@Test
