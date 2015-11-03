@@ -168,7 +168,9 @@ public class ScopusXmlParserTest {
 		ScopusXmlQuery scopusXmlQuery = new ScopusXmlQuery.ScopusXmlQueryBuilder("25548331").build();
 		String scopusUrl = scopusXmlQuery.getQueryUrl();
 		assertEquals(
-				"http://api.elsevier.com/content/search/index:SCOPUS?query=pmid(25548331)&count=1&field=pubmed-id,affiliation,author,afid&start=0&view=COMPLETE&apikey=e0fa610418a4859d24f2457e021aea60&httpAccept=application/xml",
+				"http://api.elsevier.com/content/search/index:SCOPUS?query=pmid(25548331)"
+				+ "&count=1&field=pubmed-id,affiliation,author,afid&start=0&view=COMPLETE"
+				+ "&apikey=e0fa610418a4859d24f2457e021aea60&httpAccept=application/xml",
 				scopusUrl);
 	}
 }
