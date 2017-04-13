@@ -85,5 +85,17 @@
 			<artifactId>unboundid-ldapsdk</artifactId>
 			<version>3.2.0</version>
 		</dependency>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-dynamodb</artifactId>
+			<version>1.11.118</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.github.derjust/spring-data-dynamodb -->
+		<dependency>
+			<groupId>com.github.derjust</groupId>
+			<artifactId>spring-data-dynamodb</artifactId>
+			<version>4.5.0</version>
+		</dependency>
+
 	</dependencies>
 </project>
